@@ -1,4 +1,4 @@
 FROM python:3.11
-ADD test .
+ADD tests .
 RUN pip install requests pytest pytest-html
-CMD ["pytest", "./test_hello.py", "-rA", "--html", "report.html"]
+CMD ["pytest", "./test_movie.py", "-rA", "--html", "report.html"]
