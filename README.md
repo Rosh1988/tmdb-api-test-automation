@@ -83,3 +83,5 @@ E.g. locust -f .\tests\load_test_movie.py --headless -u 2 -r 1 -t 10s
 ## Dockerfile
 
 The project is containerized with a docker file (Dockerfile) which should be used to create image and run the project in container. The load testing framework and dependencies are not included in the Dockerfile.
+
+## CI Pipeline
