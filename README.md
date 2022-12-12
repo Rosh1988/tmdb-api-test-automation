@@ -16,6 +16,7 @@ Following endpoints are in scope for the automation:
 * __Requests__
 * __Pytest-html__
 * __Locust__
+* __Python-dotenv__
 
 The dependencies are also listed in requirements.txt
 
@@ -43,6 +44,11 @@ __Install Locust__ (required for load testing)
 ```sh
 pip install locust
 ```
+__Install Python-dotenv__ (required to read environment variables from .env file)
+```sh
+pip install python-dotenv
+```
+
 
 > Note: You can also install all dependencies from requirements.txt using the command
 "pip install -r requirements.txt"
