@@ -84,4 +84,15 @@ E.g. locust -f .\tests\load_test_movie.py --headless -u 2 -r 1 -t 10s
 
 The project is containerized with a docker file (Dockerfile) which should be used to create image and run the project in container. The load testing framework and dependencies are not included in the Dockerfile.
 
-## CI Pipeline
+## Test Scenarios
+
+|Test ID   | Method | API Endpoint   | Test Name  |Test Steps   |Test Data   |Expected |
+| :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ |
+|1.1   |GET |3/movie/top_rated   |test_get_top_rated_movies_status_code_200   |Provide Valid API Key   |valid_api_key   |The response contains status code 200 & status message "Success."   |
+|1.2  |GET   |3/movie/top_rated   |test_get_top_rated_movies_status_code_401   |Provide invalid API key   |invalid_api_key   |The response contains status code 401 & status message "Invalid API key: You must be granted a valid key."   |
+|2.1   |PUT   |3/movie/{movie_id}/rating   |test_put_rate_movie_status_code_201   |Provide valid API key & valid movie id   |valid_api_key, valid_movie_id   |The response contains status code 201 & status message "Success."   |
+|2.2   |PUT   |3/movie/{movie_id}/rating   |test_put_rate_movie_status_code_401   |Provide invalid API key & valid movie id   |invalid_api_key, valid_movie_id   |The response contains status code 401 & status message "Invalid API key: You must be granted a valid key."   |
+|2.3   |PUT   |3/movie/{movie_id}/rating   |test_put_rate_movie_status_code_404   |Provide valid API key & invalid movie id   |valid_api_key, invalid_movie_id   |The response contains status code 401 & status message "The resource you requested could not be found."   |
+
+
+
