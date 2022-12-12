@@ -24,6 +24,8 @@ Pre-requisite:
 - Install Python from [here](https://www.python.org/downloads/ "here").
 - git clone https://github.com/Rosh1988/movie-db-api-testing.git`
 - cd to root folder
+- rename .env_template to .env
+- provide a valid API key for the variable 'valid_api_key' in the renamed file .env
 
 __Install Pytest__
 ```shell
