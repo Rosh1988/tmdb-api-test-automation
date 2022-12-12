@@ -1,6 +1,8 @@
 import requests
+from dotenv import load_dotenv
+import os
 
-base_url = 'https://api.themoviedb.org'
+base_url = os.getenv('base_url')
 
 
 def get_api(api, api_key):
