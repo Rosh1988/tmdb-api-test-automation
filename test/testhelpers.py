@@ -1,8 +1,10 @@
 import requests
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 import os
 
 base_url = os.getenv('base_url')
+print(base_url)
 
 
 def get_api(api, api_key):
