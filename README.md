@@ -77,8 +77,8 @@ locust -f .\tests\load_test_movie.py
 ```
 This command will start a web interface and display the url in the terminal. Go to the url in browser and enter the below parameters for the load testing:
 
-Number of users
-Spawn rate
+- Number of users
+- Spawn rate
 
 __To run the load test without web interface, execute below command in terminal__
 
